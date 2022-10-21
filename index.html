@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+<title>Ausreden Generator</title>
+</head>
+<body>
+<div>
+    <input type text style="height:200px; width:200px;" id="input">
+    <br>
+    <button onclick="inserText()">Generate</button>
+    <select id="select">
+        <option hidden>Wähle Kategorie aus</option>
+        <option value="">Zuspatt</option>
+        <option>1 tag gefahlt</option>
+        <option>3 tage gefahlt</option>
+    </select>
+</div>
+
+</body>
+
+<script>
+    let text1 = new Array();
+    let text2 = new Array();
+    let text3 = new Array();
+    text1 = ["mein hund war krank1","mein hund war krank2","mein hund war krank3"];
+    text2 = ["mein hund war krank","mein hund war krank","mein hund war krank"];
+    text3 = ["mein hund war krank","mein hund war krank","mein hund war krank"];
+    function inserText(){
+        // document.getElementById('input').value = "hello lukas zorn";
+        let selectedCategory = document.getElementById('select').value;
+        console.log(selectedCategory); 
+        if(selectedCategory === 'Zuspatt'){
+            document.getElementById('input').value = text1[0];
+        }
+        console.log(document.getElementById('select').value);
+    }
+</script>
