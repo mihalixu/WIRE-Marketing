@@ -1,0 +1,50 @@
+#input {
+    font-size: 20px;
+    text-align: center; 
+    background:#a55e12;
+    word-wrap: break-word; 
+    line-height: 20px; 
+    align-content: center;  
+    padding: 50px 50px; 
+    width: 50%; 
+    border-radius: 30px;
+    color: #ffff;
+    font-weight:bold;
+}
+
+button {
+    font-size:x-large; 
+    border-radius: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(51, 130, 218);
+}
+
+button:hover {
+    background-color: rgb(51, 168, 218);
+}
+
+select {
+    font-size:x-large; 
+    font-family: 'Courier New', Courier, monospace;  
+    background-color: rgb(51, 130, 218);
+    border-radius: 30px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+body {
+    background-color: #F5811E;
+    font-family: 'Courier New', Courier, monospace; 
+    font-weight: 200;  
+}
+
+h1 {
+    color: white;
+}
