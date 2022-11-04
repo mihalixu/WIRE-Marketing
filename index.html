@@ -3,34 +3,48 @@
 <title>Ausreden Generator</title>
 </head>
 <body>
-<div>
-    <input type text style="height:200px; width:200px;" id="input">
+<style>
+.cl {
+    height:80px; 
+    width:800px; 
+    font-size: x-large;
+    border: 3px solid black;
+}   
+</style>
+<div style="margin: auto;">
+    <textarea  id="input" class="cl" readonly></textarea>
     <br>
-    <button onclick="inserText()">Generate</button>
-    <select id="select">
+    <button onclick="inserText()" style="font-size:x-large; border-radius: 10px">Generate</button>
+    <select id="val" style="font-size:x-large; border-radius: 10px;">
         <option hidden>Wähle Kategorie aus</option>
-        <option value="">Zuspatt</option>
-        <option>1 tag gefahlt</option>
-        <option>3 tage gefahlt</option>
+        <option>Zuspatt</option>
+        <option>Prüfung verpast</option>
+        <option>Schule schwänzen</option>
     </select>
 </div>
-
 </body>
 
 <script>
-    let text1 = new Array();
-    let text2 = new Array();
-    let text3 = new Array();
-    text1 = ["mein hund war krank1","mein hund war krank2","mein hund war krank3"];
-    text2 = ["mein hund war krank","mein hund war krank","mein hund war krank"];
-    text3 = ["mein hund war krank","mein hund war krank","mein hund war krank"];
+    let zuspat = new Array;
+    let prüfungVerpast = new Array;
+    let schwänzen = new Array;
+    zuspat = ["Auf halben Schulweg habe ich gemerkt, dass ich meinen Schulranzen zu Hause vergessen habe. Da musste ich nochmal zurück.",
+    "Als ich aufgewacht bin, waren meine Augen total verklebt. Ich musste erst zum Augenarzt, um sie mir öffnen zu lassen",
+    "Als mein Wecker geklingelt hat, wollte ich das Quadrat der Uhrzeit im Kopf ausrechnen und muss dabei wieder eingeschlafen sein"];
+    prüfungVerpast = ["Mein Laptop qualmte plötzlich","Meine Oma wurde von einem Rentier umgerempelt, als sie zur Post gegangen ist",
+    "Es tut mir leid, dass ich zu die Prüfung verpasst habe, ich hatte Durchfall."];
+    schwänzen = ["Ich habe mich gestern nacht übergeben","Mein Hund war Krank","Ich versuchte Tia Portal zu instalieren"];
     function inserText(){
-        // document.getElementById('input').value = "hello lukas zorn";
-        let selectedCategory = document.getElementById('select').value;
-        console.log(selectedCategory); 
-        if(selectedCategory === 'Zuspatt'){
-            document.getElementById('input').value = text1[0];
+        let theRandomNumber = Math.floor(Math.random() * 3); // rand num betwen 0 and 2
+        let curOption = document.getElementById('val').value; 
+        if(curOption == "Zuspatt"){
+            document.getElementById('input').innerHTML = zuspat[theRandomNumber];
         }
-        console.log(document.getElementById('select').value);
+        else if(curOption == "Prüfung verpast"){
+            document.getElementById('input').innerHTML = prüfungVerpast[theRandomNumber];
+        }
+        else if(curOption == "Schule schwänzen"){
+            document.getElementById('input').innerHTML = schwänzen[theRandomNumber];
+        }
     }
 </script>
