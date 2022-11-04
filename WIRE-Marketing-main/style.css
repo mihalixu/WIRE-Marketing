@@ -1,0 +1,131 @@
+
+#logo {
+    border: 2px solid #001253;
+    padding-top: 10px;
+    background-color: #3E6D9C;
+    padding-right: 10px; 
+    padding-bottom: 10px;
+    padding-left: 20px;
+
+    /* background-color: lightgrey;
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px; */
+    margin: 7px;  
+  }
+
+
+
+
+  /* #bild { */
+    /* border: 2px solid #001253; */
+    /* padding-top: 10px; */
+    /* background-color: #3E6D9C; */
+    /* padding-right: 10px;  */
+    /* padding-bottom: 10px; */
+    /* padding-left: 20px; */
+
+    /* background-color: lightgrey;
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px; */
+    /* margin: 7px;   */
+  /* } */
+
+
+
+
+#input {
+    font-size: 20px;
+    text-align: center; 
+    background:#a55e12;
+    word-wrap: break-word; 
+    line-height: 20px; 
+    align-content: center;  
+    /* padding: 50px 50px;  */
+    width: 50%; 
+    border-radius: 30px;
+    color: #ffff;
+    font-weight:bold;
+}
+
+button {
+    font-size:x-large; 
+    border-radius: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(51, 130, 218);
+}
+
+button:hover {
+    background-color: rgb(51, 168, 218);
+}
+
+a:link {
+    color: rgb(255, 255, 255);
+  }
+  
+  /* visited link */
+  a:visited {
+    color: rgb(253, 253, 253);
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: rgb(213, 138, 7);
+  }
+  
+  /* selected link */
+  a:active {
+    color: rgb(246, 246, 246);
+  }
+
+select {
+    font-size:x-large; 
+    font-family: 'Courier New', Courier, monospace;  
+    background-color: rgb(51, 130, 218);
+    border-radius: 30px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+
+}
+
+body {
+    background-color: #F5811E;
+    font-family: 'Courier New', Courier, monospace; 
+    font-weight: 200;  
+}
+
+#h1 {
+    color: white;
+}
+
+#seg {
+    color: white;
+}
+
+
+
+
+/* Style the footer */
+footer {
+    background-color: #001253;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+
+
+  ul {
+    list-style-type: none;
+    padding: 0; 
+    margin: 0;
+    align-items: right;
+  }
+

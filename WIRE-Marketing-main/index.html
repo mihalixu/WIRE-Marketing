@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ausreden Generator</title>
+    <link rel="stylesheet" href="style.css" />
+
+
+
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: 200px; /* Should be removed. Only for demonstration */
+      }
+      
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      </style>
+  </head>
+  <body>
+
+    <div id="logo">
+      
+        <img
+          src="img/main_logo.png"
+          alt="SEG -- geht nedd"
+          style="width: 250px; height: 140px"
+        />
+    
+    </div>
+
+
+   
+    <div class="container">
+
+
+      
+      <h2 style="color: rgb(246, 246, 246)">Die Schule<br> geht mir auf</h3>
+      <div id="bild">
+        
+          <img
+            src="img/seg_boy.png"
+            alt="upps"
+            style="width: 270px; height: 270px"
+          />
+    
+      </div>
+
+      <h3 style="color: rgb(246, 246, 246)">SIMPLE EXCUSE GENERATOR</h3>
+      <div id="input"></div>
+      <br />
+      <button onclick="inserText()">Generate excuse</button>
+      <br />
+      <select id="val">
+        <option hidden>Wähle Kategorie aus</option>
+        <option>Zu spät</option>
+        <option>Prüfung verpasst</option>
+        <option>Schule schwänzen</option>
+      </select>
+    </div>
+
+
+    <div class="row">
+      <div class="column" style="background-color:#aaa;">
+        <h2>Hier Kommt affiliate</h2>
+        <!-- <img
+            src="img/affiliate.png"
+            alt="upps"
+            style="width: 270px; height: 270px"
+          /> -->
+        <p>marketing</p>
+      </div>
+      <div class="column" style="background-color:#bbb;">
+        <h2>>Hier Kommt affiliate</h2>
+        <!-- <img
+            src="img/affiliate.png"
+            alt="upps"
+            style="width: 270px; height: 270px"
+          /> -->
+        <p>marketing..</p>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <div id="foot_text"><p>&copy SEG -- Institution für Schumelrei </p></div>
+      <div id="foot_links">
+        <ul  style= "align-items: right";>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Donate Us</a></li>
+          <li><a href="#">Teil deine Idee mit uns</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script>
+      let zuspat = new Array();
+      let prüfungVerpast = new Array();
+      let schwänzen = new Array();
+
+      zuspat = [
+        "Auf halben Schulweg habe ich gemerkt, dass ich meinen Schulranzen zu Hause vergessen habe. Da musste ich nochmal zurück.",
+        "Als ich aufgewacht bin, waren meine Augen total verklebt. Ich musste erst zum Augenarzt, um sie mir öffnen zu lassen",
+        "Als mein Wecker geklingelt hat, wollte ich das Quadrat der Uhrzeit im Kopf ausrechnen und muss dabei wieder eingeschlafen sein",
+      ];
+
+      prüfungVerpast = [
+        "Mein Laptop qualmte plötzlich",
+        "Meine Oma wurde von einem Rentier umgerempelt, als sie zur Post gegangen ist",
+        "Es tut mir leid, dass ich zu die Prüfung verpasst habe, ich hatte Durchfall.",
+      ];
+
+      schwänzen = [
+        "Ich habe mich gestern nacht übergeben",
+        "Mein Hund war Krank",
+        "Ich versuchte Tia Portal zu instalieren",
+      ];
+
+      function inserText() {
+        let theRandomNumber = Math.floor(Math.random() * 3); // rand num betwen 0 and 2
+        let curOption = document.getElementById("val").value;
+        if (curOption == "Zu spät") {
+          document.getElementById("input").innerHTML = zuspat[theRandomNumber];
+        } else if (curOption == "Prüfung verpasst") {
+          document.getElementById("input").innerHTML =
+            prüfungVerpast[theRandomNumber];
+        } else if (curOption == "Schule schwänzen") {
+          document.getElementById("input").innerHTML =
+            schwänzen[theRandomNumber];
+        }
+      }
+    </script>
+  </body>
+</html>
